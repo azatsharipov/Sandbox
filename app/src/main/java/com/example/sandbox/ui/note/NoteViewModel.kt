@@ -1,7 +1,7 @@
-package com.example.sandbox.ui.notes
+package com.example.sandbox.ui.note
 
 import androidx.lifecycle.ViewModel
 
-class NotesViewModel : ViewModel() {
+class NoteViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 }

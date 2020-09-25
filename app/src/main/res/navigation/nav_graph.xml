@@ -12,7 +12,7 @@
         tools:layout="@layout/todo_fragment" />
     <fragment
         android:id="@+id/notesFragment"
-        android:name="com.example.sandbox.ui.notes.NotesFragment"
+        android:name="com.example.sandbox.ui.note.NoteFragment"
         android:label="notes_fragment"
-        tools:layout="@layout/notes_fragment" />
+        tools:layout="@layout/note_fragment" />
 </navigation>

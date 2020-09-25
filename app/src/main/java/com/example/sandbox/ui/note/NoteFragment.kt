@@ -1,4 +1,4 @@
-package com.example.sandbox.ui.notes
+package com.example.sandbox.ui.note
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -9,24 +9,24 @@ import android.view.ViewGroup
 
 import com.example.sandbox.R
 
-class NotesFragment : Fragment() {
+class NoteFragment : Fragment() {
 
     companion object {
-        fun newInstance() = NotesFragment()
+        fun newInstance() = NoteFragment()
     }
 
-    private lateinit var viewModel: NotesViewModel
+    private lateinit var viewModel: NoteViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.notes_fragment, container, false)
+        return inflater.inflate(R.layout.note_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(NotesViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(NoteViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
