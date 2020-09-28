@@ -3,10 +3,8 @@ package com.example.sandbox.ui.todo
 import android.content.Context
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sandbox.R
@@ -21,10 +19,6 @@ class TodoFragment : Fragment() {
     lateinit var recyclerView: RecyclerView
     lateinit var fabDel: FloatingActionButton
     lateinit var fabAdd: FloatingActionButton
-
-    companion object {
-        fun newInstance() = TodoFragment()
-    }
 
     private lateinit var viewModel: TodoViewModel
 
@@ -50,19 +44,16 @@ class TodoFragment : Fragment() {
         })
 
         fabDel.setOnClickListener{
-            viewModel.delete(
-                Note(
-                    "New Title",
-                    "New Text"
-                )
-            )
-//            viewModel.update(Note("New Title", "New Text"))
+            notesAdapter.selectedNotes.forEach{
+                viewModel.delete(it)
+            }
+            notesAdapter.selectedNotes.clear()
         }
 
         fabAdd.setOnClickListener{
             viewModel.insert(
                 Note(
-                    "New Title",
+                    "New Title ${notesAdapter.notes.size}",
                     "New Text"
                 )
             )
@@ -72,7 +63,7 @@ class TodoFragment : Fragment() {
         return view
     }
 
-    fun showNotes(notes: List<Note>) {
+    fun showNotes(notes: ArrayList<Note>) {
         notesAdapter = NotesAdapter(notes)
         recyclerView.apply {
             setHasFixedSize(true)

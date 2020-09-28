@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Sandbox</string>
+    <string name="welcome_text">Welcome to the my Sandbox project.
+        There are presented part of my skills in Android development.
+        Other projects you can find on my GitHub: @azatsharipov.
+    </string>
 </resources>
