@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.sandbox.data.db.entities.CovidItem
 import com.example.sandbox.data.db.entities.CovidSummary
+import com.example.sandbox.data.repositories.CountriesRepository
 import com.example.sandbox.data.repositories.CovidRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -16,8 +17,7 @@ class CovidViewModel : ViewModel() {
     fun loadCovidData() {
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
-                val covidSummary = CovidRepository()
-                    .getSummary()
+                val covidSummary = CovidRepository().getSummary()
                 covidCountriesLiveData.postValue(covidSummary)
             }
         }

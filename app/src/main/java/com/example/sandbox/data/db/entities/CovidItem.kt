@@ -6,6 +6,8 @@ data class CovidItem (
     @SerializedName("Country")
     var country: String,
 
+    var flag: String?,
+
     @SerializedName("NewConfirmed")
     var newConfirmed: Int = -1,
 
@@ -25,11 +27,11 @@ data class CovidItem (
     var totalRecovered: Int = -1,
 
     @SerializedName("Slug")
-    var slug: String? = null,
+    var slug: String?,
 
     @SerializedName("CountryCode")
-    var countryCode: String? = null,
+    var countryCode: String?,
 
     @SerializedName("ISO2")
-    var iso2: String? = null
+    var iso2: String?
 )

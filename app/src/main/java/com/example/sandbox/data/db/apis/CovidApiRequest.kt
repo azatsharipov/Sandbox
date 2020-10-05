@@ -1,4 +1,4 @@
-package com.example.sandbox.data
+package com.example.sandbox.data.db.apis
 
 import com.example.sandbox.data.db.entities.CovidItem
 import com.example.sandbox.data.db.entities.CovidSummary
