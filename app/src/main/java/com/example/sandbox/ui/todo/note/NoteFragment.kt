@@ -1,4 +1,4 @@
-package com.example.sandbox.ui.note
+package com.example.sandbox.ui.todo.note
 
 import android.app.AlertDialog
 import android.content.Context
@@ -7,7 +7,6 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.*
 import android.widget.EditText
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
@@ -71,9 +70,6 @@ class NoteFragment : Fragment() {
         etText.addTextChangedListener(onEdited)
 
         setHasOptionsMenu(true);
-        activity?.actionBar?.setIcon(R.drawable.ic_add)
-        activity?.actionBar?.setHomeAsUpIndicator(R.drawable.ic_add)
-        activity?.actionBar?.hide()
 
         alertDialog = AlertDialog.Builder(activity)
             .setTitle("Delete Note")

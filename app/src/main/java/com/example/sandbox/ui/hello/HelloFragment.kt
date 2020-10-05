@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class HelloFragment : Fragment() {
 
     lateinit var btTodo: Button
+    lateinit var btCovid: Button
 
     private lateinit var viewModel: HelloViewModel
 
@@ -25,8 +26,12 @@ class HelloFragment : Fragment() {
         val view = inflater.inflate(R.layout.hello_fragment, container, false)
         viewModel = ViewModelProviders.of(this).get(HelloViewModel::class.java)
         btTodo = view.findViewById(R.id.bt_hello_todo)
+        btCovid = view.findViewById(R.id.bt_hello_covid)
         btTodo.setOnClickListener {
             findNavController().navigate(R.id.action_helloFragment_to_todoFragment)
+        }
+        btCovid.setOnClickListener {
+            findNavController().navigate(R.id.action_helloFragment_to_covidFragment)
         }
         return view
     }

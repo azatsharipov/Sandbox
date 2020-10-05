@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/noteFragment"
-        android:name="com.example.sandbox.ui.note.NoteFragment"
+        android:name="com.example.sandbox.ui.todo.note.NoteFragment"
         android:label="note_fragment"
         tools:layout="@layout/note_fragment" />
     <fragment
@@ -27,5 +27,13 @@
         <action
             android:id="@+id/action_helloFragment_to_todoFragment"
             app:destination="@id/todoFragment" />
+        <action
+            android:id="@+id/action_helloFragment_to_covidFragment"
+            app:destination="@id/covidFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/covidFragment"
+        android:name="com.example.sandbox.ui.covid.CovidFragment"
+        android:label="covid_fragment"
+        tools:layout="@layout/covid_fragment" />
 </navigation>

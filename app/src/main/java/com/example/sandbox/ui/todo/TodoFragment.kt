@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.view.*
+import androidx.core.view.MenuItemCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
@@ -57,10 +58,22 @@ class TodoFragment : Fragment() {
                     "New Text"
                 )
             )
-//            viewModel.update(Note("New Title", "New Text"))
         }
 
+//        setHasOptionsMenu(true);
+
         return view
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.todo_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     fun showNotes(notes: ArrayList<Note>) {

@@ -1,4 +1,4 @@
-package com.example.sandbox.ui.note
+package com.example.sandbox.ui.todo.note
 
 import androidx.lifecycle.ViewModel
 import com.example.sandbox.data.db.entities.Note

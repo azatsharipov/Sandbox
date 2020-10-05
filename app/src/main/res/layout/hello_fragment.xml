@@ -22,10 +22,10 @@
         android:text="TODO Application" />
 
     <Button
-        android:id="@+id/bt_hello_second"
+        android:id="@+id/bt_hello_covid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Second Application" />
+        android:text="Covid Application" />
 
 </LinearLayout>
