@@ -46,6 +46,7 @@ class MoviesFragment : Fragment() {
     }
 
     fun updateMovies(items: List<Movie>) {
+        movies.clear()
         items.forEach {
             movies.add(it)
         }

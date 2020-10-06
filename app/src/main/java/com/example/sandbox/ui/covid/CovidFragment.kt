@@ -52,6 +52,7 @@ class CovidFragment : Fragment() {
     }
 
     fun updateCovidItems(summary: CovidSummary) {
+        covidItems.clear()
         summary.global.country = "All"
         covidItems.add(summary.global)
         summary.covidItems.forEach {

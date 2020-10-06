@@ -1,13 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorMoviesFragmentBackground"
     tools:context=".ui.movies.movie.MovieFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:padding="10dp"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_movie"
+                android:layout_width="150dp"
+                android:layout_height="225dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_movie_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="@dimen/title_size"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"/>
+
+                <com.app.progresviews.ProgressWheel
+                    android:id="@+id/wheelprogress_movie"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    app:barWidth="10dp"
+                    app:marginBtwText= "15dp"
+                    app:countText="0"
+                    app:countTextColor="@android:color/white"
+                    app:progressColor="#64b324"
+                    app:countTextSize="20sp"
+                    app:percentage="0"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Overview"
+            android:textSize="@dimen/title_size"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_movie_overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Some long text"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size"/>
+
+    </LinearLayout>
+
+</ScrollView>

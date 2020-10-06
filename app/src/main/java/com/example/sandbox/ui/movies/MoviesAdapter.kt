@@ -1,10 +1,12 @@
 package com.example.sandbox.ui.movies
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sandbox.R
 import com.example.sandbox.data.db.entities.Movie
@@ -34,5 +36,10 @@ class MoviesAdapter(var movies: List<Movie>) :
         holder.tvDate.setText(movies[position].date)
         Picasso.get().load("https://image.tmdb.org/t/p/w600_and_h900_bestv2${movies[position].posterPath}")
             .into(holder.ivMovie)
+        holder.itemView.setOnClickListener{
+            val bundle = Bundle()
+            bundle.putParcelable("movie", movies[position])
+            it.findNavController().navigate(R.id.action_moviesFragment_to_movieFragment, bundle)
+        }
     }
 }
