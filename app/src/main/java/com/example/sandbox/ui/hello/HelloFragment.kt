@@ -16,6 +16,7 @@ class HelloFragment : Fragment() {
 
     lateinit var btTodo: Button
     lateinit var btCovid: Button
+    lateinit var btMovies: Button
 
     private lateinit var viewModel: HelloViewModel
 
@@ -27,11 +28,15 @@ class HelloFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(HelloViewModel::class.java)
         btTodo = view.findViewById(R.id.bt_hello_todo)
         btCovid = view.findViewById(R.id.bt_hello_covid)
+        btMovies = view.findViewById(R.id.bt_hello_movies)
         btTodo.setOnClickListener {
             findNavController().navigate(R.id.action_helloFragment_to_todoFragment)
         }
         btCovid.setOnClickListener {
             findNavController().navigate(R.id.action_helloFragment_to_covidFragment)
+        }
+        btMovies.setOnClickListener {
+            findNavController().navigate(R.id.action_helloFragment_to_moviesFragment)
         }
         return view
     }

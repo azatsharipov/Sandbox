@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
+    android:label="Movies"
     app:startDestination="@id/helloFragment">
 
     <fragment
         android:id="@+id/todoFragment"
         android:name="com.example.sandbox.ui.todo.TodoFragment"
-        android:label="todo_fragment"
-        tools:layout="@layout/todo_fragment" >
+        android:label="TODO"
+        tools:layout="@layout/todo_fragment">
         <action
             android:id="@+id/action_todoFragment_to_noteFragment"
             app:destination="@id/noteFragment" />
@@ -17,23 +18,40 @@
     <fragment
         android:id="@+id/noteFragment"
         android:name="com.example.sandbox.ui.todo.note.NoteFragment"
-        android:label="note_fragment"
+        android:label="TODO"
         tools:layout="@layout/note_fragment" />
     <fragment
         android:id="@+id/helloFragment"
         android:name="com.example.sandbox.ui.hello.HelloFragment"
-        android:label="hello_fragment"
-        tools:layout="@layout/hello_fragment" >
+        android:label="Sandbox"
+        tools:layout="@layout/hello_fragment">
         <action
             android:id="@+id/action_helloFragment_to_todoFragment"
             app:destination="@id/todoFragment" />
         <action
             android:id="@+id/action_helloFragment_to_covidFragment"
             app:destination="@id/covidFragment" />
+        <action
+            android:id="@+id/action_helloFragment_to_moviesFragment"
+            app:destination="@id/moviesFragment" />
     </fragment>
     <fragment
         android:id="@+id/covidFragment"
         android:name="com.example.sandbox.ui.covid.CovidFragment"
-        android:label="covid_fragment"
+        android:label="Covid"
         tools:layout="@layout/covid_fragment" />
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.example.sandbox.ui.movies.MoviesFragment"
+        android:label="Movie"
+        tools:layout="@layout/movies_fragment" >
+        <action
+            android:id="@+id/action_moviesFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.example.sandbox.ui.movies.movie.MovieFragment"
+        android:label="Movie"
+        tools:layout="@layout/movie_fragment" />
 </navigation>
