@@ -78,6 +78,11 @@ dependencies {
     implementation "org.kodein.di:kodein-di-generic-jvm:$kodein_version"
     implementation "org.kodein.di:kodein-di-framework-android-x:$kodein_version"
 
+    //Okhttp3
+    def okhttp_version = "3.12.0"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+
     // Retrofit
     def retrofit_version = "2.4.0"
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"

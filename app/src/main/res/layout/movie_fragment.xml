@@ -43,7 +43,7 @@
                     android:layout_height="75dp"
                     app:barWidth="10dp"
                     app:marginBtwText= "15dp"
-                    app:countText="0"
+                    app:countText="0android"
                     app:countTextColor="@android:color/white"
                     app:progressColor="#64b324"
                     app:countTextSize="20sp"

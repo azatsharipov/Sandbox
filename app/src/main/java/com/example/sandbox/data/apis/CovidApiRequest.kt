@@ -1,11 +1,9 @@
-package com.example.sandbox.data.db.apis
+package com.example.sandbox.data.apis
 
 import com.example.sandbox.data.db.entities.CovidItem
 import com.example.sandbox.data.db.entities.CovidSummary
 import kotlinx.coroutines.Deferred
-import retrofit2.Call
 import retrofit2.Response
-import retrofit2.http.Field
 import retrofit2.http.GET
 
 interface CovidApiRequest {

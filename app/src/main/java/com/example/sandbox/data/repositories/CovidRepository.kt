@@ -1,6 +1,6 @@
 package com.example.sandbox.data.repositories
 
-import com.example.sandbox.data.db.apis.CovidApiRequest
+import com.example.sandbox.data.apis.CovidApiRequest
 import com.example.sandbox.data.db.entities.CovidItem
 import com.example.sandbox.data.db.entities.CovidSummary
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory

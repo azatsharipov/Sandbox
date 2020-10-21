@@ -1,6 +1,6 @@
 package com.example.sandbox.data.repositories
 
-import com.example.sandbox.data.db.apis.CountriesApiRequest
+import com.example.sandbox.data.apis.CountriesApiRequest
 import com.example.sandbox.data.db.entities.Country
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import retrofit2.Retrofit

@@ -1,4 +1,4 @@
-package com.example.sandbox.data.db.apis
+package com.example.sandbox.data.apis
 
 import com.example.sandbox.data.db.entities.MoviesResponse
 import kotlinx.coroutines.Deferred
